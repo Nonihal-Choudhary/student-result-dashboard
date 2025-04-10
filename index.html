@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Result Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📘 Student Result Dashboard</h1>
+  </header>
+
+  <main>
+    <section>
+        <h2>Add New Student</h2>
+        <form id="studentForm">
+          <input type="number" id="rollInput" placeholder="Roll No" required />
+          <input type="text" id="nameInput" placeholder="Name" required />
+          <input type="number" id="mathsInput" placeholder="Maths Marks" required />
+          <input type="number" id="scienceInput" placeholder="Science Marks" required />
+          <input type="number" id="englishInput" placeholder="English Marks" required />
+          <button type="submit">Add Student</button>
+        </form>
+      </section>
+
+    <section>
+      <h2>All Students Result</h2>
+
+      <input type="text" id="searchInput" placeholder="Search by Name or Roll No" />
+
+      <table>
+        <thead>
+          <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>English</th>
+            <th>Total</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody id="student-table-body"></tbody>
+      </table>
+    </section>
+    <button id="downloadCSVBtn">⬇️ Download as CSV</button>
+
+    <section class="chart-section">
+      <h2>📈 Subject-wise Average Marks</h2>
+      <canvas id="marksChart" width="800" height="500"></canvas>
+    </section>
+  </main>
+
+  <!-- JS File Link -->
+  <script src="script.js"></script>
+  <div id="toast"></div>
+
+</body>
+</html>
